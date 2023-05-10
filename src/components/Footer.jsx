@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="col-span-4 md:col-span-2 lg:col-span-1">
                 <h6 className="uppercase font-bold mb-5 text-lg text-light">About Us</h6>
                 <p>
-                    Welcome to Sphene Qwizines, your online destination for authentic Nigerian cuisine. Whether you're a seasoned foodie or a curious newcomer to Nigerian cuisines, we have something for you.
+                    Welcome to Sphene Qwizines, your online destination for authentic Nigerian cuisine. Whether you&#39;re a seasoned foodie or a curious newcomer to Nigerian cuisines, we have something for you.
                 </p>
                 <ul className="mt-5 flex items-center gap-4">
                     <li><a href="#" className="bi bi-facebook text-2xl footer-link"></a></li>
