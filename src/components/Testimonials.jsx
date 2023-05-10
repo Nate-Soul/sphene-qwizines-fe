@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import {useRef, useState, useEffect} from "react";
 import Image from "next/image";
 import Client1 from "../media/images/testimonees/person_1.jpg";
 import Client2 from "../media/images/testimonees/person_2.jpg";
@@ -8,11 +8,33 @@ import Client5 from "../media/images/testimonees/person_5.jpg";
 
 const Testimonials = () => {
 
+  const containerRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    setCanScrollLeft(container.scrollLeft > 0);
+    setCanScrollRight(
+      container.scrollLeft < container.scrollWidth - container.clientWidth
+    );
+    const handleScroll = () => {
+      setCanScrollLeft(container.scrollLeft > 0);
+      setCanScrollRight(
+        container.scrollLeft < container.scrollWidth - container.clientWidth
+      );
+    };
+    container.addEventListener("scroll", handleScroll);
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleScroll = (direction) => {
-    if(direction == "prev"){
-      console.log("you don press me");
-    } else if(direction == "next") {
-      console.log("leave me abeg");
+    const container = containerRef.current;
+    const containerWidth = container.clientWidth;
+    if (direction === "prev") {
+      container.scrollLeft -= containerWidth;
+    } else if (direction === "next") {
+      container.scrollLeft += containerWidth;
     }
   };
 
@@ -59,9 +81,9 @@ const Testimonials = () => {
       <div className="container">
         <div className="section-heading">
           <h3 className="section-heading-title">Testimonials</h3>
-          <p className="section-heading-label">What our clients are saying about us</p>
+          <p className="section-heading-label">What our satisfied customers are saying about us</p>
         </div>
-        <div className="flex gap-4 md:gap-6 horizontal-scroll hide-scrollbar">
+        <div id="testimonialCardContainer" className="flex gap-4 md:gap-6 horizontal-scroll hide-scrollbar" ref={containerRef}>
           {
             testimonials && testimonials.map(testimonial => (
               <figure className="testimonial-card flex-none" key={testimonial.id}>
@@ -87,10 +109,10 @@ const Testimonials = () => {
           }
         </div>
         <div className="flex justify-center mt-6">
-          <button className="bg-main p-2 rounded-s-3xl text-white text-xl hover:bg-main-200 transition" onClick={handleScroll("prev")}>
+          <button className="bg-main p-2 rounded-s-3xl text-white text-xl hover:bg-main-200 transition" onClick={() => handleScroll("prev")} disabled={!canScrollLeft}>
             <span className="bi bi-chevron-left"></span>
           </button>
-          <button className="bg-main p-2 rounded-e-3xl text-white text-xl hover:bg-main-200 transition" onClick={handleScroll("next")}>
+          <button className="bg-main p-2 rounded-e-3xl text-white text-xl hover:bg-main-200 transition" onClick={() => handleScroll("next")} disabled={!canScrollRight}>
             <span className="bi bi-chevron-right"></span>
           </button>
         </div>

@@ -25,13 +25,13 @@ const Cooks = () => {
     <section className="py-16">
       <div className="container">
         <div className="section-heading">
-          <h3 className="section-heading-title">Meet the Prestigious Chefs</h3>
+          <h3 className="section-heading-title">Meet Our Qualified Chefs</h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-4 gap-16">
           {
             chefs && chefs.map(chef => (
               <picture className="rounded-xl shadow bg-main-200 bg-opacity-70 h-96 flex flex-col items-end justify-center row-span-4 md:odd:row-start-1 md:even:row-start-2" key={chef.id}>
-                <Image src={chef.imageUrl} className="object-cover w-full h-full" alt="chef's name"/>
+                <Image src={chef.imageUrl} className="object-cover w-full h-full" alt="chef&#39;s name"/>
               </picture>
             ))
           }

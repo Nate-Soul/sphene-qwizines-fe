@@ -12,7 +12,7 @@ const Hero = () => {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  });
 
 
   const nextSlide = () => {
@@ -60,7 +60,7 @@ const Hero = () => {
   ]
 
   return (
-    <section className="py-16 bg-light relative">
+    <section className="bg-light relative py-20">
       <div className="container">
       {slideitems && slideitems.map((slideitem, index) => (
         <div className={`transition ease-in-out ${currentSlide === index ? "flex items-center opacity-100" : "hidden opacity-0"}`} key={index}>

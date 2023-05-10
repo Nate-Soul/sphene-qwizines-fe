@@ -34,7 +34,7 @@ const Specials = () => {
     <section className="py-16">
       <div className="container">
         <div className="section-heading">
-          <h3 className="section-heading-title">Today's Specials</h3>
+          <h3 className="section-heading-title">Today&#39;s Specials</h3>
           <p>Roll your tongue into our palpate stimulating unending foods</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:gap-8 gap-6">
@@ -42,7 +42,7 @@ const Specials = () => {
             specials.map(special => (
               <div className="special-card" key={special.id}>
                 <figure className="text-center flex flex-col gap-4">
-                  <Image src={special.image} className="w-32 h-32 object-cover rounded-full border-4 border-main mx-auto" width="150" height="150" alt={special.name}/>
+                  <Image src={special.image} className="w-full object-cover rounded-lg" width="150" height="150" alt={special.name}/>
                     <figcaption className="flex flex-col gap-4 mb-10">
                       <h5 className="font-semibold text-main hover:text-main-200">{special.name}</h5>
                       <p className="truncate">

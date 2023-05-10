@@ -1,43 +1,59 @@
-import React from 'react'
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-light py-12">
+    <footer className="bg-main-200 text-white py-12">
         <div className="container grid grid-cols-4 gap-4">
             <div className="col-span-4 md:col-span-2 lg:col-span-1">
-                <h6 className="capitalize font-semibold mb-5 text-lg">Quick Links</h6>
-                <ul className="flex flex-col gap-2">
-                    <li><a href="#" className="text-gray-600 hover:text-main">Home</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">Why choose us?</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">Season Specials</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">Testimonial</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">Our Prestigious Cooks</a></li>
+                <h6 className="uppercase font-bold mb-5 text-lg text-light">About Us</h6>
+                <p>
+                    Welcome to Sphene Qwizines, your online destination for authentic Nigerian cuisine. Whether you're a seasoned foodie or a curious newcomer to Nigerian cuisines, we have something for you.
+                </p>
+                <ul className="mt-5 flex items-center gap-4">
+                    <li><a href="#" className="bi bi-facebook text-2xl footer-link"></a></li>
+                    <li><a href="#" className="bi bi-instagram text-2xl footer-link"></a></li>
+                    <li><a href="#" className="bi bi-twitter text-2xl footer-link"></a></li>
+                    <li><a href="#" className="bi bi-youtube text-2xl footer-link"></a></li>
                 </ul>
             </div>
             <div className="col-span-4 md:col-span-2 lg:col-span-1">
-                <h6 className="capitalize font-semibold mb-5 text-lg">Our Policies</h6>
+                <h6 className="uppercase font-bold mb-5 text-lg text-light">Quick Links</h6>
                 <ul className="flex flex-col gap-2">
-                    <li><a href="#" className="text-gray-600 hover:text-main">Privacy Policy</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">Terms and Conditions</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">Refund Policy</a></li>
+                    <li><Link href="/" className="footer-link">Home</Link></li>
+                    <li><a href="#" className="footer-link">Our Menu</a></li>                                           
+                    <li><Link href="/about" className="footer-link">About Us</Link></li>
+                    <li><a href="#" className="footer-link">Testimonial</a></li>
+                    <li><a href="#" className="footer-link">Our Qualified Cooks</a></li>
                 </ul>
             </div>
             <div className="col-span-4 md:col-span-2 lg:col-span-1">
-                <h6 className="capitalize font-semibold mb-5 text-lg">Contact</h6>
-                <ul className="flex flex-col gap-2">
-                    <li><a href="#" className="text-gray-600 hover:text-main">+234 809 768 5506</a></li>
-                    <li><a href="#" className="text-gray-600 hover:text-main">support@spheneqwizines.kitchen</a></li>
-                </ul>
-                <address className="mt-2">
-                    12 Lakeview, St. Ajah Street, Lagos.
+                <h6 className="uppercase font-bold mb-5 text-lg text-light">Contact</h6>
+                <address className="mb-2">
+                    <span className="bi bi-geo mr-2"></span>
+                    12 Greenview, Ewet Housing Estate, Akwa Ibom.
                 </address>
+                <ul className="flex flex-col gap-2">
+                    <li>
+                        <a href="#" className="footer-link">
+                            <span className="bi bi-phone mr-2"></span>
+                            +234 809 768 5506
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="footer-link">
+                            <span className="bi bi-envelope mr-2"></span>
+                            support@spheneqwizines.kitchen
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div className="col-span-4 md:col-span-2 lg:col-span-1">                
-                <h6 className="capitalize font-semibold mb-5 text-lg">Subscribe to Our Newsletter</h6>
+                <h6 className="uppercase font-bold mb-5 text-lg text-light">Newsletter</h6>
+                <p className="mb-3">You can trust us. We&#39;ll send you only promo offers.</p>
                 <form>
-                    <div className="flex">
-                        <input type="email" name="email_sub" id="emailSub" className="bg-white text-gray-700 outline-main-200 p-2 rounded-s-lg" placeholder="Enter your email address"/>
-                        <button className="p-2 bg-main rounded-e-lg hover:bg-main-200 hover:text-light">Subscribe</button>
+                    <div className="flex relative">
+                        <input type="email" name="email_sub" id="emailSub" className="bg-white text-gray-700 outline-main-200 p-3 rounded-3xl w-full" placeholder="Enter your email address"/>
+                        <button className="absolute right-0 py-3 px-4 border-none bg-main rounded-3xl hover:bg-main-200 hover:text-light"><span className="bi bi-arrow-right"></span></button>
                     </div>
                 </form>
             </div>

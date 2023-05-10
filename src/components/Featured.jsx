@@ -71,7 +71,7 @@ const Featured = () => {
     <section className="py-8">
       <div className="container">
         <div className="section-heading">
-            <h3 className="section-heading-title">Our Menu</h3>
+            <h3 className="section-heading-title">Our Top Rated Menu</h3>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {
@@ -95,6 +95,9 @@ const Featured = () => {
               </div>
             ))
           }
+        </div>
+        <div className="flex justify-end mt-5">
+          <a href="#" className="text-main underline hover:text-main-300">View all</a>
         </div>
       </div>      
     </section>

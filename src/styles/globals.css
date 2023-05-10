@@ -11,6 +11,10 @@
 .nav-link.active{
   @apply text-main hover:text-main-200
 }
+.mobile-menu{
+  height: calc(50vh - 64px);
+  z-index: 9999;
+}
 .section-heading{
   @apply mb-10 text-center
 }
@@ -34,24 +38,19 @@
 }
 
 .testimonial-card{
-  @apply shadow rounded-xl text-center flex flex-col gap-4 p-4 scale-95 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4
+  @apply shadow rounded-xl text-center flex flex-col gap-4 p-4 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4
 }
 
 .hide-scrollbar{
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-
-.testimonial-card.active{
-  scale: 1;
-}
-
 .hide-scrollbar::-webkit-scrollbar{
   height: 0;
   width: 0;
 }
 
-.testimonial-card {
+/* .testimonial-card {
   animation: scroll 50s linear infinite;
 }
 
@@ -62,4 +61,7 @@
   100% {
     transform: translateX(-100%);
   }
+} */
+.footer-link {
+  @apply text-gray-200 hover:text-light
 }
