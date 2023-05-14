@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -29,10 +31,10 @@ const Navbar = () => {
                 <Link href="/about" className={`block py-2 hover:text-light ${currentUrl === "/about" ? "text-light" : ""}`}>About Us</Link>
               </li>
               <li>
-                <Link href="/" className={`block py-2 hover:text-light ${currentUrl === "/menu" ? "text-light" : ""}`}>Menu</Link>
+                <Link href="/menu" className={`block py-2 hover:text-light ${currentUrl === "/menu" ? "text-light" : ""}`}>Menu</Link>
               </li>
               <li>
-                <Link href="/" className={`block py-2 hover:text-light ${currentUrl === "/contact" ? "text-light" : ""}`}>Contact Us</Link>
+                <Link href="/contact" className={`block py-2 hover:text-light ${currentUrl === "/contact" ? "text-light" : ""}`}>Contact Us</Link>
               </li>
             </ul>
           </div>)
@@ -45,7 +47,7 @@ const Navbar = () => {
             <Link href="/" className={`nav-link ${currentUrl === "/" ? "active" : ""}`}>Home</Link>
           </li>
           <li>
-            <Link href="/" className={`nav-link ${currentUrl === "/menu" ? "active" : ""}`}>Menu</Link>
+            <Link href="/menu" className={`nav-link ${currentUrl === "/menu" ? "active" : ""}`}>Menu</Link>
           </li>
           <li>
             <Link href="/about" className={`nav-link ${currentUrl === "/about" ? "active" : ""}`}>About</Link>

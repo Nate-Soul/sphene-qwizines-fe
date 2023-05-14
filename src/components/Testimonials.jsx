@@ -1,3 +1,5 @@
+"use client";
+
 import {useRef, useState, useEffect} from "react";
 import Image from "next/image";
 import Client1 from "../media/images/testimonees/person_1.jpg";

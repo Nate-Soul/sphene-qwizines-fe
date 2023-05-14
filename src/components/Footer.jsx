@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-main-200 text-white py-16">
         <div className="container">
-            <div className="grid grid-cols-3 gap-8">
-                <div className="col-span-4 md:col-span-2 lg:col-span-1">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="col-span-1">
                     <h6 className="capitalize font-bold mb-8 text-xl">Business Hours</h6>
                     <ul className="flex flex-col gap-2">
                         <li className="flex justify-between pb-5 border-b border-b-gray-300">
@@ -22,7 +22,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-span-4 md:col-span-2 lg:col-span-1">
+                <div className="col-span-1">
                     <h6 className="capitalize font-bold mb-8 text-xl">Contact Us</h6>
                     <address className="mb-5">
                         12 Greenview, Ewet Housing Estate, Uyo.
@@ -63,7 +63,7 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-span-4 md:col-span-2 lg:col-span-1">                
+                <div className="col-span-1">                
                     <h6 className="capitalize font-bold mb-8 text-xl">Newsletter</h6>
                     <p className="my-5">You can trust us. We&#39;ll send you only promotions &amp; offers.</p>
                     <form>

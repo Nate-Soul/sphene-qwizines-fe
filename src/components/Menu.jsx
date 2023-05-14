@@ -1,4 +1,3 @@
-import Link from "next/link";
 import FeaturedImg1 from "../media/images/products/rice.png";
 import FeaturedImg2 from "../media/images/products/f2.jpeg";
 import FeaturedImg3 from "../media/images/products/f1.jpeg";
@@ -9,8 +8,10 @@ import FeaturedImg7 from "../media/images/products/fish-and-chips.png";
 import FeaturedImg8 from "../media/images/products/recipe4.jpeg";
 import MenuItem from "./MenuItem";
 
-const Featured = () => {
-  const features = [
+
+const Menu = () => {
+    
+  const menus = [
     {
       id: 1,
       imageUrl: FeaturedImg1,
@@ -68,25 +69,21 @@ const Featured = () => {
       price: 2999.99
     },
   ]
+
   return (
-    <section className="py-8">
+    <section className="py-14">
       <div className="container">
         <div className="section-heading">
-            <h3 className="section-heading-title">Our Top Rated Menu</h3>
+          <h3 className="section-heading-title">Our Exclusive Menu</h3>
         </div>
         <div className="grid grid-cols-4 gap-8">
-          {
-            features && features.map((feature, index) => (
-              <MenuItem key={index} name={feature.name} price={feature.price} imageUrl={feature.imageUrl}/>
-            ))
-          }
+        {menus && menus.map((menu, index) => (
+            <MenuItem key={index} name={menu.name} imageUrl={menu.imageUrl} price={menu.price}/>
+        ))}
         </div>
-        <div className="flex justify-end mt-5">
-          <Link href="/menu" className="text-main underline hover:text-main-300">View all</Link>
-        </div>
-      </div>      
+      </div>
     </section>
   )
 }
 
-export default Featured
+export default Menu

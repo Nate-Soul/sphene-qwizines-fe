@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import HeroImage1 from "../media/images/products/salate-removebg-preview.png";
 import HeroImage2 from "../media/images/products/burger-removebg-preview.png";
