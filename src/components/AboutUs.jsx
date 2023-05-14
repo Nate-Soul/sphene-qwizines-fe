@@ -1,11 +1,13 @@
 import Image from "next/image";
 import AboutUsImg from "../media/images/products/img5.jpg";
 import GenericHeader from "./GenericHeader";
+import { generateCrumbs } from "./BreadCrumbs";
 
 const AboutUs = () => {
+    const crumbs = generateCrumbs("/about");
   return (
     <>
-    <GenericHeader title="About Us"/>
+    <GenericHeader title="About Us" crumbs={crumbs}/>
     <section className="py-14">
         <div className="container">
             <div className="section-heading">

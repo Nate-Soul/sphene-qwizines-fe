@@ -1,11 +1,13 @@
 import React from "react";
 import GenericHeader from "./GenericHeader";
 import Link from "next/link";
+import { generateCrumbs } from "./BreadCrumbs";
 
 const ContactUs = () => {
+  const crumbs = generateCrumbs('/contact');
   return (
     <>
-    <GenericHeader title="Contact Us"/>
+    <GenericHeader title="Contact Us" crumbs={crumbs}/>
     <section className="py-16">
       <div className="container grid grid-cols-12">
         <aside className="col-span-12 lg:col-span-4 xl:col-span-3 flex flex-wrap flex-row gap-4 lg:flex-col lg:justify-between bg-main text-white p-5 rounded-b-lg lg:rounded-br-none lg:rounded-s-xl order-2 lg:order-1">

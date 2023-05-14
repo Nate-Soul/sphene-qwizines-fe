@@ -58,7 +58,7 @@
   @apply mb-4 px-3 block
 }
 .form-control{
-  @apply p-2 outline-none w-full border rounded-lg
+  @apply p-2 outline-none w-full border rounded-lg hover:shadow-sm hover:shadow-main focus:shadow-sm focus:shadow-main
 }
 /* .testimonial-card {
   animation: scroll 50s linear infinite;

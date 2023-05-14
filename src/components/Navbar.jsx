@@ -61,8 +61,9 @@ const Navbar = () => {
             <span className="bi bi-search nav-link cursor-pointer"></span>
           </li>
           <li>
-            <Link href="/" className="nav-link">
+            <Link href="/cart" className="nav-link relative">
               <span className="bi bi-basket"></span>
+              <span className="absolute right-0 top-0 bg-main text-white h-2 w-2 inline-flex items-center justify-center rounded-full"></span>
             </Link>
           </li>
         </ul>
