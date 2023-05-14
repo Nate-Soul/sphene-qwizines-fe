@@ -17,7 +17,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      raleway: ["Raleway", 'sans-serif']
+      mulish: ["Mulish", 'sans-serif']
     },
     extend: {
       colors: {

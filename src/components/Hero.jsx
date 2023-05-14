@@ -65,12 +65,12 @@ const Hero = () => {
       {slideitems && slideitems.map((slideitem, index) => (
         <div className={`transition ease-in-out ${currentSlide === index ? "flex items-center opacity-100" : "hidden opacity-0"}`} key={index}>
           <div className="content w-full text-center md:text-left md:w-1/2 flex flex-col gap-5">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold capitalize">{slideitem.title}</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold capitalize">{slideitem.title}</h2>
             <p>
               {slideitem.desc}
             </p>
             <div className="cta-group">
-              <button className="px-4 py-3 rounded-full bg-main-200 text-white border-2 border-transparent hover:bg-light hover:border-main-200 hover:text-main-200">Explore Our Menu</button>
+              <button className="px-4 py-3 font-medium rounded-full bg-main-200 text-white border-2 border-transparent uppercase text-sm hover:bg-light hover:border-main-200 hover:text-main-200">Explore Our Menu</button>
             </div>
           </div>
           <picture className="w-0 md:w-1/2">

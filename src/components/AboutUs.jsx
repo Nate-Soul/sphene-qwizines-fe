@@ -1,12 +1,15 @@
 import Image from "next/image";
 import AboutUsImg from "../media/images/products/img5.jpg";
+import GenericHeader from "./GenericHeader";
 
 const AboutUs = () => {
   return (
+    <>
+    <GenericHeader title="About Us"/>
     <section className="py-14">
         <div className="container">
             <div className="section-heading">
-                <h3 className="section-heading-title">About Us</h3>
+                <h3 className="section-heading-title">Who we are</h3>
             </div>
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-6">
                 <picture>
@@ -29,6 +32,7 @@ const AboutUs = () => {
             </div>
         </div>
     </section>
+    </>
   )
 }
 

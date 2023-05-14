@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link href="/about" className={`nav-link ${currentUrl === "/about" ? "active" : ""}`}>About</Link>
           </li>
           <li>
-            <Link href="/" className={`nav-link ${currentUrl === "/contact" ? "active" : ""}`}>Contact</Link>
+            <Link href="/contact" className={`nav-link ${currentUrl === "/contact" ? "active" : ""}`}>Contact</Link>
           </li>
         </ul>
         <ul className="flex gap-4 sm:gap-6 md:gap-8">
@@ -60,7 +60,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link href="/" className="nav-link">
-              <span className="bi bi-cart"></span>
+              <span className="bi bi-basket"></span>
             </Link>
           </li>
         </ul>

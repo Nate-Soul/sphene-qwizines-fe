@@ -42,7 +42,7 @@ const Specials = () => {
             specials.map(special => (
               <div className="special-card" key={special.id}>
                 <figure className="text-center flex flex-col gap-4">
-                  <Image src={special.image} className="w-full object-cover rounded-lg" width="150" height="150" alt={special.name}/>
+                  <Image src={special.image} className="object-cover w-40 h-40 rounded-full border-4 border-main mx-auto" width="160" height="160" alt={special.name}/>
                     <figcaption className="flex flex-col gap-4 mb-10">
                       <h5 className="font-semibold text-main hover:text-main-200">{special.name}</h5>
                       <p className="truncate">
@@ -51,7 +51,7 @@ const Specials = () => {
                     </figcaption>
                 </figure>
                 <div className="flex justify-between items-center absolute bottom-0 left-0 right-0 text-center">
-                  <span className="flex-1">&#8358;{special.price.toFixed(2)}</span>
+                  <h6 className="flex-1 font-bold text-gray-500">&#8358;{special.price.toFixed(2)}</h6>
                   <button className="p-2 bg-main hover:bg-main-200 text-white flex-1 rounded-br-lg">
                     Buy Now
                   </button>

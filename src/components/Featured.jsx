@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import FeaturedImg1 from "../media/images/products/rice.png";
 import FeaturedImg2 from "../media/images/products/f2.jpeg";
 import FeaturedImg3 from "../media/images/products/f1.jpeg";
@@ -13,21 +14,21 @@ const Featured = () => {
     {
       id: 1,
       imageUrl: FeaturedImg1,
-      name: "Jollof Rice",
+      name: "Jollof rice garnished with african salad",
       excerpt: "A classic Nigerian dish made with long grain rice, tomatoes, onions, and a blend of spices. Served with your choice of protein",
       price: 1999.99
     },
     {
       id: 2,
       imageUrl: FeaturedImg2,
-      name: "Egusi Soup",
+      name: "Egusi Soup mixed with foofoo and dry meat",
       excerpt: "A hearty soup made with ground melon seeds, vegetables, and your choice of protein. Served with fufu or rice.",
       price: 1799.99
     },
     {
       id: 3,
       imageUrl: FeaturedImg3,
-      name: "Suya",
+      name: "Suya from chicken mixed with goat meat",
       excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quos, nemo atque facilis odit officiis.",
       price: 2999.99
     },
@@ -73,26 +74,23 @@ const Featured = () => {
         <div className="section-heading">
             <h3 className="section-heading-title">Our Top Rated Menu</h3>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-4 gap-8">
           {
             features && features.map((feature, index) => (
-              <div className="featured-card" key={index}>
-                <figure className="flex flex-col text-center gap-4">
-                  <Image src={feature.imageUrl} alt={feature.name} className="mx-auto mb- h-32 w-32 object-cover rounded-full border-4 border-main"/>
-                  <figcaption className="flex flex-col gap-4">
-                    <h5 className="capitalize font-semibold text-main hover:text-main-200">{feature.name}</h5>
-                    {/* <p>
-                      {feature.excerpt}
-                    </p> */}
-                    <div className="flex justify-between gap-4 flex-wrap items-center">
-                      <span>&#8358;{feature.price}</span>
-                      <button className="bg-main text-white py-2 px-3 rounded-3xl hover:bg-main-200">
-                        <span className="bi bi-cart-plus"></span> Add to Cart
-                      </button>
-                    </div>
-                  </figcaption>
-                </figure>
-              </div>
+              <figure className="featured-card flex flex-col lg:flex-row justify-between gap-5 col-span-full sm:col-span-2" key={index}>
+                <Image src={feature.imageUrl} alt={feature.name} className="w-full lg:w-40 object-cover" width={160} height="100%"/>
+                <figcaption className="flex flex-col justify-between p-5 gap-5">
+                  <div className="flex gap-3">
+                    <Link href={`/menu/${feature.name}`}>
+                      <h5 className="capitalize font-bold text-main hover:text-main-200">{feature.name}</h5>
+                    </Link>
+                    <h6 className="font-semibold text-gray-600 self-start text-lg">&#8358;<span>{feature.price}</span></h6>
+                  </div>
+                  <button className="inline-flex items-center justify-center gap-2 bg-main text-white py-2 px-3 rounded-3xl hover:bg-main-200 text-lg md:text-sm self-end w-full md:w-auto">
+                    <span className="bi bi-basket"></span> Add to basket
+                  </button>
+                </figcaption>
+              </figure>
             ))
           }
         </div>

@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .horizontal-scroll{
   @apply overflow-x-auto p-2 scroll-smooth flex-nowrap
+}
+.generic-header{
+  background: linear-gradient(rgba(104, 185, 22, 0.6), rgba(104, 185, 22, 0.6)), url('http://localhost:3000/images/gallery/img9.jpg') no-repeat center center/cover;
 }
 .nav-link{
   @apply text-gray-600 hover:text-main font-semibold
@@ -12,7 +17,7 @@
   @apply text-main hover:text-main-200
 }
 .mobile-menu{
-  height: calc(50vh - 64px);
+  height: calc(100vh - 64px);
   z-index: 9999;
 }
 .section-heading{
@@ -30,11 +35,11 @@
 }
 
 .special-card{
-  @apply rounded-lg shadow shadow-main hover:shadow-main-200 p-5 relative
+  @apply rounded-lg shadow shadow-main hover:shadow-main-200 p-5 relative overflow-hidden
 }
 
 .featured-card{
-  @apply shadow shadow-main p-5 rounded-lg hover:shadow-main-200
+  @apply shadow shadow-main rounded-lg hover:shadow-main-200 overflow-hidden
 }
 
 .testimonial-card{
@@ -49,7 +54,12 @@
   height: 0;
   width: 0;
 }
-
+.form-group{
+  @apply mb-4 px-3 block
+}
+.form-control{
+  @apply p-2 outline-none w-full border rounded-lg
+}
 /* .testimonial-card {
   animation: scroll 50s linear infinite;
 }
