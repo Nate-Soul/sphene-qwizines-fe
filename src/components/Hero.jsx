@@ -72,7 +72,7 @@ const Hero = () => {
               {slideitem.desc}
             </p>
             <div className="cta-group">
-              <button className="px-4 py-3 font-medium rounded-full bg-main-200 text-white border-2 border-transparent uppercase text-sm hover:bg-light hover:border-main-200 hover:text-main-200">Explore Our Menu</button>
+              <button className="px-3 sm:px-4 py-2 sm:py-3 font-medium rounded-full bg-main-200 text-white border-2 border-transparent uppercase text-xs sm:text-sm hover:bg-light hover:border-main-200 hover:text-main-200">Explore Our Menu</button>
             </div>
           </div>
           <picture className="w-0 md:w-1/2">

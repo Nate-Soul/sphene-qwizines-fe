@@ -10,14 +10,14 @@ const ContactUs = () => {
     <GenericHeader title="Contact Us" crumbs={crumbs}/>
     <section className="py-16">
       <div className="container grid grid-cols-12">
-        <aside className="col-span-12 lg:col-span-4 xl:col-span-3 flex flex-wrap flex-row gap-4 lg:flex-col lg:justify-between bg-main text-white p-5 rounded-b-lg lg:rounded-br-none lg:rounded-s-xl order-2 lg:order-1">
+        <aside className="col-span-12 lg:col-span-4 xl:col-span-3 flex flex-wrap flex-row gap-4 lg:flex-col lg:justify-between bg-main text-white p-5 rounded-b-lg lg:rounded-br-none lg:rounded-s-xl order-2 lg:order-1 overflow-hidden">
         <div className="flex flex-none flex-col gap-4 w-full sm:w-1/2 md:w-1/3 lg:w-auto">
                 <h6 className="font-semibold uppercase">
                   Branches 
                 </h6>
                 <div className="addresses">
                   <address className="flex gap-2">
-                    <span className="bi bi-geo"></span> 
+                    <span className="bi bi-geo hidden xxs:inline-flex"></span> 
                     12 Greenview, Ewet Housing Estate, Uyo.
                   </address>
                 </div>
@@ -26,8 +26,10 @@ const ContactUs = () => {
                 <h6 className="font-semibold uppercase">Email</h6>
                 <ul className="flex flex-col gap-2">
                   <li className="flex gap-2">
-                    <span className="bi bi-envelope"></span>
-                    <Link href="mailto:contact@spheneqwizines.com">contact@spheneqwizines.com</Link>
+                    <span className="bi bi-envelope hidden xxs:inline-flex"></span>
+                    <p>
+                      <Link href="mailto:contact@spheneqwizines.com">contact@spheneqwizines.com</Link>
+                    </p>
                   </li>
 
                 </ul>
@@ -36,7 +38,7 @@ const ContactUs = () => {
                 <h6 className="font-semibold uppercase"> Phone </h6>
                 <ul className="flex flex-col gap-2">
                   <li className="flex gap-2">
-                    <span className="bi bi-phone"></span>
+                    <span className="bi bi-phone hidden xxs:inline-flex"></span>
                     <Link href="tel:+2347086752038">+234 708 675 2038</Link>
                   </li>
                 </ul>

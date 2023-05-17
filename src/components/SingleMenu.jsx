@@ -6,7 +6,7 @@ const SingleMenu = () => {
   const menu = [{
     id: 1,
     name: "Grilled Chicken with a touch of africa",
-    descripton: "Golden fried rice with mixed vegetables, plantain, and a delicious homemade gravy",
+    descripton: "Golden fried rice mixed with vegetables, plantain, and a delicious homemade gravy and chicken stew",
     price: 4500.00,
     featuredImg: MockPicture
   }]
@@ -16,10 +16,10 @@ const SingleMenu = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <picture className="border-2 border-main rounded-xl overflow-hidden p-3">
-            <Image src={menu[0].featuredImg} className="w-full h-96" alt={menu[0].name}/>
+            <Image src={menu[0].featuredImg} className="w-full h-auto xs:h-96" alt={menu[0].name}/>
           </picture>
           <div className="flex flex-col gap-4">
-            <h2 className="font-bold text-2xl">{menu[0].name}</h2>
+            <h2 className="font-bold text-2xl hover:text-main transition">{menu[0].name}</h2>
             <h6 className="font-semibold text-main-600">&#8358;{menu[0].price.toFixed(2)}</h6>
             <p>{menu[0].descripton}</p>
             <div className="flex gap-6">
@@ -30,7 +30,7 @@ const SingleMenu = () => {
               </div>
               <button className="bg-main py-2 px-3 inline-flex gap-2 items-center text-white">
                 <span className="bi bi-basket"></span>
-                Add to Basket
+                <span className="hidden xs:inline">Add to Basket</span>
               </button>
             </div>
           </div>

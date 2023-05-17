@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>)
         }
         <Link href="/">
-          <span className="font-bold text-main italic text-2xl">Sphene Qwizines</span>
+          <span className="font-bold text-main italic text-sm xxs:text-xl sm:text-2xl">Sphene Qwizines</span>
         </Link>
         <ul className="hidden md:flex gap-8 capitalize">
           <li>
@@ -63,7 +63,7 @@ const Navbar = () => {
           <li>
             <Link href="/cart" className="nav-link relative">
               <span className="bi bi-basket"></span>
-              <span className="absolute right-0 top-0 bg-main text-white h-2 w-2 inline-flex items-center justify-center rounded-full"></span>
+              <span className="absolute right-0 top-0 w-4 h-2 bg-main text-white inline-flex items-center justify-center rounded-t-3xl"></span>
             </Link>
           </li>
         </ul>

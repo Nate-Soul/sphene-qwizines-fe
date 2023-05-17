@@ -8,16 +8,16 @@ const Footer = () => {
                 <div className="col-span-1">
                     <h6 className="capitalize font-bold mb-8 text-xl">Business Hours</h6>
                     <ul className="flex flex-col gap-2">
-                        <li className="flex justify-between pb-5 border-b border-b-gray-300">
-                            <span>Monday &ndash; Friday</span>
+                        <li className="flex flex-col xxs:flex-row justify-between pb-5 border-b border-b-gray-300">
+                            <span>Monday &ndash; Friday:</span>
                             <span>08.00am &ndash; 10.00pm</span>
                         </li>
-                        <li className="flex justify-between py-5 border-b border-b-gray-300">
-                            <span>Saturday</span>
+                        <li className="flex flex-col xxs:flex-row justify-between py-5 border-b border-b-gray-300">
+                            <span>Saturday:</span>
                             <span>10.00am &ndash; 10.00pm</span>
                         </li>
-                        <li className="flex justify-between py-5 border-b border-b-gray-300">
-                            <span>Sunday</span>
+                        <li className="flex flex-col xxs:flex-row  justify-between py-5 border-b border-b-gray-300">
+                            <span>Sunday:</span>
                             <span>02.00pm &ndash; 10.00pm</span>
                         </li>
                     </ul>

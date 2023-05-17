@@ -43,16 +43,16 @@ const Specials = () => {
               <div className="special-card" key={special.id}>
                 <figure className="text-center flex flex-col gap-4">
                   <Image src={special.image} className="object-cover w-40 h-40 rounded-full border-4 border-main mx-auto" width="160" height="160" alt={special.name}/>
-                    <figcaption className="flex flex-col gap-4 mb-10">
+                    <figcaption className="flex flex-col gap-4 mb-14 xs:mb-10">
                       <h5 className="font-semibold text-main hover:text-main-200">{special.name}</h5>
                       <p className="truncate">
                         {special.description}
                       </p>
                     </figcaption>
                 </figure>
-                <div className="flex justify-between items-center absolute bottom-0 left-0 right-0 text-center">
+                <div className="flex flex-col gap-3 xs:gap-0 xs:flex-row justify-between items-center absolute bottom-0 left-0 right-0 text-center">
                   <h6 className="flex-1 font-bold text-gray-500">&#8358;{special.price.toFixed(2)}</h6>
-                  <button className="p-2 bg-main hover:bg-main-200 text-white flex-1 rounded-br-lg">
+                  <button className="p-2 bg-main hover:bg-main-200 text-white xs:flex-1 rounded-b-lg xs:rounded-br-lg w-full xs:w-auto">
                     Buy Now
                   </button>
                 </div>
