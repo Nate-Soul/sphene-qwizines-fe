@@ -1,11 +1,11 @@
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Featured from "@/components/Featured";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import Specials from "@/components/Specials";
-import Testimonials from "@/components/Testimonials";
+import Hero from "@/components/subcomponents/Hero";
+import Featured from "@/components/sections/Featured";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
+import Specials from "@/components/sections/Specials";
+import Testimonials from "@/components/sections/Testimonials";
 import Footer from "@/components/Footer";
-import Cooks from "@/components/Cooks";
+import Cooks from "@/components/sections/Cooks";
 
 export default function Home() {
   return (

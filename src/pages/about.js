@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import WhyChooseUs from "@/components/WhyChooseUs";
+import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Footer from "@/components/Footer";
 import AboutUs from "@/components/AboutUs";
 

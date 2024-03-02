@@ -1,7 +1,6 @@
 import Image from "next/image";
-import AboutUsImg from "../media/images/products/img5.jpg";
 import GenericHeader from "./GenericHeader";
-import { generateCrumbs } from "./BreadCrumbs";
+import { generateCrumbs } from "./ui/BreadCrumbs";
 
 const AboutUs = () => {
     const crumbs = generateCrumbs("/about");
@@ -14,8 +13,15 @@ const AboutUs = () => {
                 <h3 className="section-heading-title">Who we are</h3>
             </div>
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-6">
-                <picture>
-                    <Image src={AboutUsImg} alt="About Sphene Qwizines" className="object-cover w-full"/>
+                <picture className="relative">
+                    <Image 
+                        src="/media/images/products/img5.jpg" 
+                        alt="About Sphene Qwizines" 
+                        className="object-cover w-full"
+                        width={626}
+                        height={417}
+                        priority
+                    />
                 </picture>
                 <article>
                     <p className="mb-4">

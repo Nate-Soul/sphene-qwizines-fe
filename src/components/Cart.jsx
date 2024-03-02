@@ -1,48 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import FeaturedImg1 from "../media/images/products/rice.png";
-import FeaturedImg2 from "../media/images/products/f2.jpeg";
-import FeaturedImg3 from "../media/images/products/f1.jpeg";
-import FeaturedImg4 from "../media/images/products/chicken_fry.png";
-import FeaturedImg5 from "../media/images/products/recipe1.jpeg";
-import FeaturedImg6 from "../media/images/products/nepali-momo.png";
-import FeaturedImg7 from "../media/images/products/fish-and-chips.png";
-import FeaturedImg8 from "../media/images/products/recipe4.jpeg";
+import { menuItems as cartItems } from "@/data/menus";
 
 
 const Cart = () => {
-
-  const cartItems = [
-    {
-      id: 1,
-      imageUrl: FeaturedImg1,
-      name: "Jollof rice garnished with african salad",
-      excerpt: "A classic Nigerian dish made with long grain rice, tomatoes, onions, and a blend of spices. Served with your choice of protein",
-      price: 1999.99
-    },
-    {
-      id: 2,
-      imageUrl: FeaturedImg2,
-      name: "Egusi Soup mixed with foofoo and dry meat",
-      excerpt: "A hearty soup made with ground melon seeds, vegetables, and your choice of protein. Served with fufu or rice.",
-      price: 1799.99
-    },
-    {
-      id: 3,
-      imageUrl: FeaturedImg3,
-      name: "Suya from chicken mixed with goat meat",
-      excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quos, nemo atque facilis odit officiis.",
-      price: 2999.99
-    },
-    {
-      id: 4,
-      imageUrl: FeaturedImg4,
-      name: "Akara",
-      excerpt: "A popular street food made from black-eyed peas, onions, and spices, deep-fried until crispy on the outside and soft on the inside. Served with a side of spicy pepper sauce",
-      price: 2999.99
-    }
-  ];
 
   return (
     <section className="py-14">
@@ -55,7 +17,7 @@ const Cart = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
           <div className="col-span-1 lg:col-span-2">
-            {cartItems && cartItems.map((cartItem, index) => (
+            {cartItems && cartItems.splice(0,4).map((cartItem, index) => (
               <div className="cart-item flex flex-col xs:flex-row flex-wrap gap-8 items-center px-3 py-4 shadow mb-4 rounded-lg justify-between" key={index}>
                 <figure className="flex flex-col xs:flex-row items-center gap-2 col-span-full sm:col-span-8">
                   <Image src={cartItem.imageUrl} className="object-cover xs:object-contain rounded-full xs:rounded-none border-2 border-main xs:border-transparent w-28 h-28" height={100} width={100} alt={cartItem.name}/>

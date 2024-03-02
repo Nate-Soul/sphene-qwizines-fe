@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import GenericHeader from "@/components/GenericHeader";
 import SingleMenu from "@/components/SingleMenu";
 import Footer from "@/components/Footer";
-import { generateCrumbs } from "@/components/BreadCrumbs";
+import { generateCrumbs } from "@/components/ui/BreadCrumbs";
 
 const SingleMenuPage = () => {
   const router = useRouter();

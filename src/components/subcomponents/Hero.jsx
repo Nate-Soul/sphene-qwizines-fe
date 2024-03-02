@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import HeroImage1 from "../media/images/products/salate-removebg-preview.png";
-import HeroImage2 from "../media/images/products/burger-removebg-preview.png";
 import { useState, useEffect } from "react";
 
 const Hero = () => {
@@ -33,33 +31,51 @@ const Hero = () => {
       id: 1,
       title: "Discover the Flavors of Nigeria with Sphene Qwizines",
       desc: "Savor the Authentic Tastes of Nigerian Cuisine From the Comfort of Your Home",
-      imageUrl: HeroImage1
+      imageUrl: "/media/images/products/salate-removebg-preview.png"
     },
     {
       id: 2,
-      title: "Experience the Best of Nigerian Cuisine",
+      title: "It's Not just Food, It's The African Experience",
       desc: "From Classic Jollof Rice to Mouth-Watering Suya, Sphene Qwizines Has It All",
-      imageUrl: HeroImage2
+      imageUrl: "/media/images/products/burger-removebg-preview.png"
     },
     {
       id: 3,
       title: "Satisfy Your Cravings for Nigerian Food",
       desc: "Order Online and Enjoy Authentic Flavors in the Comfort of Your Home",
-      imageUrl: HeroImage1
+      imageUrl: "/media/images/products/hero-3.png"
     },
     {
       id: 4,
       title: "Taste the Richness of Nigerian Culture",
-      desc: "Let Sphene Qwizines Take You on a Culinary Journey Across Nigeria",
-      imageUrl: HeroImage2
+      desc: "Embark On A Culinary Journey where Tradition Meets Taste - Explore Our Delicacies Crafted with Love and Heritage",
+      imageUrl: "/media/images/products/burger-removebg-preview.png"
     },
     {
       id: 5,
       title: "Indulge in the Bold and Spicy Flavors of Nigeria",
       desc: "Spice Up Your Day with Our Authentic Nigerian Dishes",
-      imageUrl: HeroImage1
+      imageUrl: "/media/images/products/burger-removebg-preview.png"
     },
-  ]
+  ];
+
+  const customers = [
+    {
+      id: 1,
+      imageUrl: "/media/images/clients/john.png",
+      name: "John Doe"
+    },
+    {
+      id: 2,
+      imageUrl: "/media/images/clients/nate.png",
+      name: "Nate Soul"
+    },
+    {
+      id: 3,
+      imageUrl: "/media/images/clients/gloria.png",
+      name: "Glory Elisa"
+    }
+  ];
 
   return (
     <section className="bg-light relative py-20">
@@ -74,9 +90,17 @@ const Hero = () => {
             <div className="cta-group">
               <button className="px-3 sm:px-4 py-2 sm:py-3 font-medium rounded-full bg-main-200 text-white border-2 border-transparent uppercase text-xs sm:text-sm hover:bg-light hover:border-main-200 hover:text-main-200">Explore Our Menu</button>
             </div>
+            <div className="flex items-center gap-3 mt-8">
+              <div className="flex items-center ">
+                {customers.length > 0 && customers.map(customer => (
+                  <Image src={customer.imageUrl} width={35} height={35} alt={customer.name} key={customer.id} className="-m-1"/>
+                ))}
+              </div>
+              <span>1000+ Satisfied Customers</span>
+            </div>
           </div>
           <picture className="w-0 md:w-1/2">
-            <Image src={slideitem.imageUrl} className="object-cover rounded-full" alt="alternative text"/>
+            <Image src={slideitem.imageUrl} className="object-cover rounded-full" width={600} height={600} alt="alternative text"/>
           </picture>
         </div>
         )) 

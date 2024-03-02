@@ -1,5 +1,5 @@
 import React from "react";
-import BreadCrumbs from "./BreadCrumbs";
+import BreadCrumbs from "./ui/BreadCrumbs";
 
 const GenericHeader = ({title, crumbs}) => {
   return (

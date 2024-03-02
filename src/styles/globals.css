@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .horizontal-scroll{
-  @apply overflow-x-auto p-2 scroll-smooth flex-nowrap
+  @apply overflow-x-auto py-4 px-2 scroll-smooth flex-nowrap
 }
 .generic-header{
   background: linear-gradient(rgba(104, 185, 22, 0.6), rgba(104, 185, 22, 0.6)), url('http://localhost:3000/images/gallery/img9.jpg') no-repeat center center/cover;
@@ -35,15 +35,15 @@
 }
 
 .special-card{
-  @apply rounded-lg shadow shadow-main hover:shadow-main-200 p-5 relative overflow-hidden
+  @apply rounded-lg shadow-lg p-3
 }
 
 .featured-card{
-  @apply shadow shadow-main rounded-lg hover:shadow-main-200 overflow-hidden
+  @apply shadow rounded-lg hover:shadow-main overflow-hidden
 }
 
 .testimonial-card{
-  @apply shadow rounded-xl text-center flex flex-col gap-4 p-4 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4
+  @apply shadow-lg rounded-lg text-center flex flex-col gap-4 p-4 basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4
 }
 
 .hide-scrollbar{

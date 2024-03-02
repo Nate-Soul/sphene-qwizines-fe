@@ -63,7 +63,8 @@ const Navbar = () => {
           <li>
             <Link href="/cart" className="nav-link relative">
               <span className="bi bi-basket"></span>
-              <span className="absolute right-0 top-0 w-4 h-2 bg-main text-white inline-flex items-center justify-center rounded-t-3xl"></span>
+              <span 
+                className="absolute -top-2 -right-2 inline-flex justify-center items-center text-xs leading-none bg-main text-white h-4 w-4 rounded-full">4</span>
             </Link>
           </li>
         </ul>
