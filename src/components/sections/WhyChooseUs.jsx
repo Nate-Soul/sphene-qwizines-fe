@@ -21,14 +21,14 @@ const WhyChooseUs = () => {
             icon: "gift",
             content: "Our friendly and knowledgeable customer support team is available to answer your questions, address any concerns, and ensure that your order is delivered promptly and accurately. We take pride in providing exceptional customer service, and it shows in the rave reviews from our happy customers."
         },
-    ]
+    ];
 
   return (
     <section className="py-16">
         <div className="container">
-            <div className="section-heading">
+            <header className="section-heading">
                 <h3 className="section-heading-title">Why Choose Us?</h3>
-            </div>
+            </header>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {statements && statements.map(statement => (
                 <div className="wcu-card" key={statement.id}>

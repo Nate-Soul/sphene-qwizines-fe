@@ -32,10 +32,10 @@ const Specials = () => {
   return (
     <section className="py-16">
       <div className="container">
-        <div className="section-heading">
+        <header className="section-heading">
           <h3 className="section-heading-title">Today&#39;s Specials</h3>
           <p>Roll your tongue into our palpate stimulating daily special offers</p>
-        </div>
+        </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
           {
             specials.map((special, specialIndex) => (

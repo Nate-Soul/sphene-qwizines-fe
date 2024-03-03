@@ -1,7 +1,6 @@
 "use client";
 
 import {useRef, useState, useEffect} from "react";
-import Image from "next/image";
 
 import TestimonialCard from "../subcomponents/TestimonialCard";
 
@@ -78,10 +77,10 @@ const Testimonials = () => {
   return (
     <section className="py-16">
       <div className="container">
-        <div className="section-heading">
+        <header className="section-heading">
           <h3 className="section-heading-title">Our Customers Love Our Food</h3>
           <p className="section-heading-label">What our satisfied customers are saying about their culinary experiences with us</p>
-        </div>
+        </header>
         <div id="testimonialCardContainer" className="flex gap-4 md:gap-6 horizontal-scroll hide-scrollbar" ref={containerRef}>
           {
             testimonials && testimonials.map((testimonial, testimonialIndex) => (
