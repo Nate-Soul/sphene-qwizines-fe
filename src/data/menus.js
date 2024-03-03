@@ -17,7 +17,7 @@ export const menuItems = [
     },
     {
       id: 3,
-      imageUrl: "/media/images/products/vegetable-salad.png",
+      imageUrl: "/media/images/products/vegetable-salad.webp",
       name: "Vegetable Salad",
       excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quos, nemo atque facilis odit officiis.",
       price: 2999.99,
@@ -57,7 +57,7 @@ export const menuItems = [
     },
     {
       id: 8,
-      imageUrl: "/media/images/products/assorted-kpomo.png",
+      imageUrl: "/media/images/products/assorted-kpomo.webp",
       name: "Peppered Kpomo",
       excerpt: "A delicious and nutritious vegetable stew made with spinach, bell peppers, onions, and your choice of protein. Served with rice or fufu.",
       price: 2999.99,
