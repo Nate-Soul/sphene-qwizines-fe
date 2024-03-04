@@ -14,8 +14,9 @@ const SpecialsCard = ({ special }) => {
         </div>
       </div>
       <div className="flex gap-3 justify-between items-center">
-            <p className="font-bold text-gray-500">&#8358;{special.price}</p>
-          <button className="inline-flex gap-2 bg-transparent text-main">
+            <p className="font-bold">&#8358;{special.price}</p>
+          <button 
+            className="inline-flex gap-2 bg-transparent text-main py-2 px-3 border border-main ring-2 ring-transparent rounded-3xl hover:border-transparent hover:bg-main-200 hover:text-white focus:ring-main ring-opacity-10">
             <span className="bi bi-basket"></span>
             Order Now
           </button>

@@ -33,8 +33,8 @@ const Specials = () => {
     <section className="py-16">
       <div className="container">
         <header className="section-heading">
-          <h3 className="section-heading-title">Today&#39;s Specials</h3>
-          <p>Roll your tongue into our palpate stimulating daily special offers</p>
+          <h3 className="section-heading-title">This Week&#39;s Specials</h3>
+          <p>Roll your tongue into our palpate stimulating weekly special offers</p>
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
           {

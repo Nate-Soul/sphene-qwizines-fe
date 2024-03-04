@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -82,16 +83,21 @@ const Hero = () => {
       <div className="container">
       {slideitems && slideitems.map((slideitem, index) => (
         <div className={`transition ease-in-out ${currentSlide === index ? "flex items-center opacity-100" : "hidden opacity-0"}`} key={index}>
-          <div className="content w-full text-center md:text-left md:w-1/2 flex flex-col gap-5">
+          <div className="content w-full text-center md:text-left md:w-1/2 flex flex-col gap-y-5">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold capitalize">{slideitem.title}</h2>
             <p>
               {slideitem.desc}
             </p>
             <div className="cta-group">
-              <button className="px-3 sm:px-4 py-2 sm:py-3 font-medium rounded-full bg-main-200 text-white border-2 border-transparent uppercase text-xs sm:text-sm hover:bg-light hover:border-main-200 hover:text-main-200">Explore Our Menu</button>
+              <Link
+                href="/menu" 
+                className="px-3 sm:px-5 py-3 sm:py-4 font-medium rounded-full bg-main text-white uppercase text-xs sm:text-sm hover:bg-main-200"
+              >
+                Explore Our Menu
+              </Link>
             </div>
             <div className="flex items-center gap-3 mt-8">
-              <div className="flex items-center ">
+              <div className="flex items-center">
                 {customers.length > 0 && customers.map(customer => (
                   <Image src={customer.imageUrl} width={35} height={35} alt={customer.name} key={customer.id} className="-m-1"/>
                 ))}

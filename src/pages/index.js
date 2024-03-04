@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Hero from "@/components/subcomponents/Hero";
+import Hero from "@/components/sections/Hero";
 import Featured from "@/components/sections/Featured";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Specials from "@/components/sections/Specials";
