@@ -1,6 +1,6 @@
 import Image from "next/image";
 import GenericHeader from "./GenericHeader";
-import { generateCrumbs } from "./ui/BreadCrumbs";
+import { generateCrumbs } from "@/lib/utils";
 
 const AboutUs = () => {
     const crumbs = generateCrumbs("/about");

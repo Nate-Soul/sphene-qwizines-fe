@@ -102,7 +102,7 @@ const Hero = () => {
                   <Image src={customer.imageUrl} width={35} height={35} alt={customer.name} key={customer.id} className="-m-1"/>
                 ))}
               </div>
-              <span>1000+ Satisfied Customers</span>
+              <span className="text-xs sm:text-sm text-left">100+ Satisfied Customers <br /> recommend our foods</span>
             </div>
           </div>
           <picture className="w-0 md:w-1/2">

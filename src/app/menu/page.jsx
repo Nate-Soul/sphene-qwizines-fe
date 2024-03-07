@@ -1,6 +1,6 @@
 import GenericHeader from "@/components/GenericHeader"
 import MenuItem from "@/components/subcomponents/MenuItem";
-import { generateCrumbs } from "@/components/ui/BreadCrumbs";
+import { generateCrumbs } from "@/lib/utils";
 
 //data
 import { menuItems as menus } from "@/data/menus";

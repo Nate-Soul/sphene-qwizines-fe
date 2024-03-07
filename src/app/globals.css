@@ -20,6 +20,12 @@
   height: calc(100vh - 64px);
   z-index: 9999;
 }
+.Toastify__progress-bar--success {
+  background: rgb(104, 185, 22);
+}
+.Toastify__toast-icon > svg {
+  fill: rgb(104, 185, 22);
+}
 .section-heading{
   @apply mb-10 text-center
 }

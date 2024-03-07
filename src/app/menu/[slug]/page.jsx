@@ -13,7 +13,7 @@ import { addToCart } from "@/redux/cartReducer";
 
 //Components and UIs
 import GenericHeader from "@/components/GenericHeader";
-import { generateCrumbs } from "@/components/ui/BreadCrumbs";
+import { generateCrumbs } from "@/lib/utils";
 
 //data
 import { menuItems } from "@/data/menus";
@@ -31,7 +31,9 @@ const MenuDetail = ({ params }) => {
   const singleMenuItem = menuItems.filter(
     (menuItem) => menuItem.slug === menuItemSlug
   );
+  
   const [quantity, setQuantity] = useState(1);
+
   // useEffect(() => {
   //   const fetchData = async () => {
   //     const data = await getData(menuItemSlug);
@@ -93,12 +95,12 @@ const MenuDetail = ({ params }) => {
                   size={1}
                   className="border outline-none py-2 px-1"
                   onChange={(e) => handleQtyChange(e)}
+                  value={quantity}
                 >
                   {
                     Array.from({ length: singleMenuItem[0].availableQuantity }, (_, index) => (
                       <option 
                         value={index + 1}
-                        defaultValue={quantity}
                         key={index}
                       >
                         {index + 1}

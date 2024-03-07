@@ -1,7 +1,7 @@
 import React from "react";
 import GenericHeader from "./GenericHeader";
 import Link from "next/link";
-import { generateCrumbs } from "./ui/BreadCrumbs";
+import { generateCrumbs } from "@/lib/utils"; 
 
 const ContactUs = () => {
   const crumbs = generateCrumbs('/contact');

@@ -63,6 +63,7 @@ const CartPage = () => {
                     size={1}
                     className="border rounded-lg outline-none py-2 px-1 text-center"
                     onChange={(e) => modifyCartItem(e, cartItem.id)}
+                    value={cartItem.quantity}
                   >
                     {
                       Array.from({length: cartItem.availableQuantity}, (_, itemIndex) => (
