@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap'); */
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,7 @@
   @apply overflow-x-auto py-4 px-2 scroll-smooth flex-nowrap
 }
 .generic-header{
-  background: linear-gradient(rgba(104, 185, 22, 0.6), rgba(104, 185, 22, 0.6)), url('http://localhost:3000/images/gallery/img9.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(104, 185, 22, 0.6), rgba(104, 185, 22, 0.6)), url('http://localhost:3000/media/images/gallery/img9.jpg') no-repeat center center/cover;
 }
 .nav-link{
   @apply text-gray-600 hover:text-main font-semibold
@@ -60,6 +60,7 @@
 .form-control{
   @apply p-2 outline-none w-full border rounded-lg hover:shadow-sm hover:shadow-main focus:shadow-sm focus:shadow-main
 }
+
 /* .testimonial-card {
   animation: scroll 50s linear infinite;
 }
@@ -72,6 +73,7 @@
     transform: translateX(-100%);
   }
 } */
+
 .footer-link {
   @apply text-gray-200 hover:text-light
 }

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
     './src/components/**/*.{js,ts,jsx,tsx}',
     './src/app/**/*.{js,ts,jsx,tsx}',
   ],
@@ -15,9 +15,6 @@ module.exports = {
         xl: '5rem',
         '2xl': '6rem',
       }
-    },
-    fontFamily: {
-      mulish: ["Mulish", 'sans-serif']
     },
     screens: {
       'xxs': '300px',

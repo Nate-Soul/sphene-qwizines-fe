@@ -1,14 +1,19 @@
 "use client";
 
+//react modules
 import { useState } from "react";
+import { useSelector } from "react-redux";
+
+//next modules
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
 
+  const cartItems = useSelector(state => state.cart.products);
+
   const [openMenu, setOpenMenu] = useState(false);
-  const router = useRouter();
-  const currentUrl = router.asPath;
+  const currentUrl = usePathname();
 
   const toggleOpenMenu = () => {
     setOpenMenu(!openMenu);
@@ -64,7 +69,7 @@ const Navbar = () => {
             <Link href="/cart" className="nav-link relative">
               <span className="bi bi-basket"></span>
               <span 
-                className="absolute -top-2 -right-2 inline-flex justify-center items-center text-xs leading-none bg-main text-white h-4 w-4 rounded-full">4</span>
+                className="absolute -top-2 -right-2 inline-flex justify-center items-center text-xs leading-none bg-main text-white h-4 w-4 rounded-full">{cartItems.length}</span>
             </Link>
           </li>
         </ul>
