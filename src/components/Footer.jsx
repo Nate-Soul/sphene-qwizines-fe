@@ -6,36 +6,64 @@ const Footer = () => {
         <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="col-span-1">
-                    <h6 className="capitalize font-bold mb-8 text-xl">Business Hours</h6>
-                    <ul className="flex flex-col gap-2">
-                        <li className="flex flex-col xxs:flex-row justify-between pb-5 border-b border-b-gray-300">
+                    <div className="flex flex-col gap-y-8">
+                        <div>
+                            <h6 className="capitalize font-bold mb-8">About Us</h6>
+                            <div className="flex flex-col gap-y-2">
+                                <p>
+                                At sphene Qwizines we&apos;re passionate about Nigerian cuisines and the unique flavours that make it special. we believe that food is not just about sustenance, but culture, tradition, and community.
+                                </p>
+                                <p>
+                                <Link href="/about" className="py-2 px-3 border border-gray-100 rounded-3xl inline-flex gap-x-2 justify-center items-center text-white hover:border-transparent hover:bg-gray-200 hover:text-main-300">
+                                    Learn More
+                                </Link>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-y-3">
+                            <h6 className="font-bold">Subscribe to our Newsletter</h6>
+                            <p className="text-sm">You can trust us. We&#39;ll send you only promotions and offers.</p>
+                            <form>
+                                <div className="flex relative">
+                                    <input type="email" name="email_sub" id="emailSub" className="bg-white text-gray-700 outline-main-200 p-3 rounded-3xl w-full" placeholder="Enter your email address"/>
+                                    <button className="absolute right-0 py-3 px-4 border-none bg-main rounded-3xl hover:bg-main-200 hover:text-light"><span className="bi bi-arrow-right"></span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-span-1">
+                    <h6 className="capitalize font-bold mb-8">Business Hours</h6>
+                    <ul className="flex flex-col gap-y-5">
+                        <li className="flex flex-col xxs:flex-row justify-between">
                             <span>Monday &ndash; Friday:</span>
                             <span>08.00am &ndash; 10.00pm</span>
                         </li>
-                        <li className="flex flex-col xxs:flex-row justify-between py-5 border-b border-b-gray-300">
+                        <li className="flex flex-col xxs:flex-row justify-between">
                             <span>Saturday:</span>
                             <span>10.00am &ndash; 10.00pm</span>
                         </li>
-                        <li className="flex flex-col xxs:flex-row  justify-between py-5 border-b border-b-gray-300">
+                        <li className="flex flex-col xxs:flex-row  justify-between">
                             <span>Sunday:</span>
                             <span>02.00pm &ndash; 10.00pm</span>
                         </li>
                     </ul>
                 </div>
                 <div className="col-span-1">
-                    <h6 className="capitalize font-bold mb-8 text-xl">Contact Us</h6>
-                    <address className="mb-5">
+                    <h6 className="capitalize font-bold mb-8">Contact Us</h6>
+                    <address className="mb-5 flex gap-2 items-center">
+                        <span className="bi bi-geo"></span>
                         12 Greenview, Ewet Housing Estate, Uyo.
                     </address>
                     <ul className="flex flex-col gap-2 mb-5">
                         <li>
-                            <Link href="tel:+2347086752038" className="footer-link font-bold text-xl flex gap-2">
+                            <Link href="tel:+2347086752038" className="footer-link text-sm flex gap-2">
                                 <span className="bi bi-phone"></span>
                                 +234 708 675 2038
                             </Link>
                         </li>
                         <li>
-                            <Link href="tel:+2348143287118" className="footer-link font-bold text-xl flex gap-2">
+                            <Link href="tel:+2348143287118" className="footer-link text-sm flex gap-2">
                                 <span className="bi bi-telephone"></span>
                                 +234 814 328 7118
                             </Link>
@@ -43,7 +71,7 @@ const Footer = () => {
                     </ul>
                     <ul className="flex flex-col gap-2 mb-5">
                         <li>
-                            <Link href="mailto:contact@spheneqwizines.com">
+                            <Link href="mailto:natesoul.dev@gmail.com">
                                 contact@spheneqwizines.com
                             </Link>
                         </li>
@@ -63,19 +91,9 @@ const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="col-span-1">                
-                    <h6 className="capitalize font-bold mb-8 text-xl">Newsletter</h6>
-                    <p className="my-5">You can trust us. We&#39;ll send you only promotions &amp; offers.</p>
-                    <form>
-                        <div className="flex relative">
-                            <input type="email" name="email_sub" id="emailSub" className="bg-white text-gray-700 outline-main-200 p-3 rounded-3xl w-full" placeholder="Enter your email address"/>
-                            <button className="absolute right-0 py-3 px-4 border-none bg-main rounded-3xl hover:bg-main-200 hover:text-light"><span className="bi bi-arrow-right"></span></button>
-                        </div>
-                    </form>
-                </div>
             </div>
             <div className="mt-8 text-center bg-main-400 text-white p-5">
-                <p>Sphene qwizines &copy; 2023 All rights reserved. Made with <span className="bi bi-heart-fill text-red-600"></span> using NextJS &amp; Strapi CMS by <Link className="footer-link" href="https://github.com/Nate-Soul ">Nate</Link></p>
+                <p>Sphene Qwizines &copy; 2023 - {new Date().getFullYear()} All rights reserved. Made with <span className="bi bi-heart-fill text-red-600"></span> using Next.js &amp; Strapi CMS by <Link className="footer-link" href="https://github.com/Nate-Soul">Nate</Link></p>
             </div>
         </div>
     </footer>

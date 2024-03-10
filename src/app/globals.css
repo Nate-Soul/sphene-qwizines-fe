@@ -81,5 +81,5 @@
 } */
 
 .footer-link {
-  @apply text-gray-200 hover:text-light
+  @apply text-gray-50 hover:text-light
 }

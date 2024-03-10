@@ -32,31 +32,31 @@ const Hero = () => {
       id: 1,
       title: "Discover the Flavors of Nigeria with Sphene Qwizines",
       desc: "Savor the Authentic Tastes of Nigerian Cuisine From the Comfort of Your Home",
-      imageUrl: "/media/images/products/salate-removebg-preview.png"
+      imageUrl: "/media/images/gallery/salate-removebg-preview.png"
     },
     {
       id: 2,
       title: "It's Not just Food, It's The African Experience",
       desc: "From Classic Jollof Rice to Mouth-Watering Suya, Sphene Qwizines Has It All",
-      imageUrl: "/media/images/products/burger-removebg-preview.png"
+      imageUrl: "/media/images/gallery/burger-removebg-preview.png"
     },
     {
       id: 3,
       title: "Satisfy Your Cravings for Nigerian Food",
       desc: "Order Online and Enjoy Authentic Flavors in the Comfort of Your Home",
-      imageUrl: "/media/images/products/hero-3.png"
+      imageUrl: "/media/images/gallery/hero-3.png"
     },
     {
       id: 4,
       title: "Taste the Richness of Nigerian Culture",
       desc: "Embark On A Culinary Journey where Tradition Meets Taste - Explore Our Delicacies Crafted with Love and Heritage",
-      imageUrl: "/media/images/products/burger-removebg-preview.png"
+      imageUrl: "/media/images/gallery/burger-removebg-preview.png"
     },
     {
       id: 5,
       title: "Indulge in the Bold and Spicy Flavors of Nigeria",
       desc: "Spice Up Your Day with Our Authentic Nigerian Dishes",
-      imageUrl: "/media/images/products/burger-removebg-preview.png"
+      imageUrl: "/media/images/gallery/burger-removebg-preview.png"
     },
   ];
 
@@ -79,11 +79,11 @@ const Hero = () => {
   ];
 
   return (
-    <section className="bg-light relative py-20">
+    <section className="bg-light relative py-20 overflow-hidden">
       <div className="container">
       {slideitems && slideitems.map((slideitem, index) => (
         <div className={`transition ease-in-out ${currentSlide === index ? "flex items-center opacity-100" : "hidden opacity-0"}`} key={index}>
-          <div className="content w-full text-center md:text-left md:w-1/2 flex flex-col gap-y-5">
+          <div className="content w-full h-full text-center md:text-left md:w-1/2 flex flex-col gap-y-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold capitalize">{slideitem.title}</h2>
             <p>
               {slideitem.desc}
@@ -111,23 +111,30 @@ const Hero = () => {
         </div>
         )) 
       }
-      <button className="absolute text-2xl md:text-4xl text-main-200 top-1/2 right-0 z-10" onClick={nextSlide}>
-        <span className="bi bi-chevron-right"></span>
-      </button>
-      <button className="absolute text-2xl md:text-4xl text-main-200 top-1/2 left-0 z-10" onClick={prevSlide}>
-        <span className="bi bi-chevron-left"></span>
-      </button>
-      <div className="indicators absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
-        {slideitems.map((_, index) => (
-          <span
-            key={index}
-            className={`indicator inline-block w-3 h-3 rounded-full mx-2 ${
-              currentSlide === index ? "bg-main-200" : "bg-main"
-            }`}
-            onClick={() => setCurrentSlide(index)}
-          ></span>
-        ))}
-      </div>
+        <button className="absolute text-2xl md:text-4xl text-main-200 top-1/2 right-0 z-10" onClick={nextSlide}>
+          <span className="bi bi-chevron-right"></span>
+        </button>
+        <button className="absolute text-2xl md:text-4xl text-main-200 top-1/2 left-0 z-10" onClick={prevSlide}>
+          <span className="bi bi-chevron-left"></span>
+        </button>
+        <div className="indicators absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+          {slideitems.map((_, index) => (
+            <span
+              key={index}
+              className={`indicator inline-block w-3 h-3 rounded-full mx-2 ${
+                currentSlide === index ? "bg-main-200" : "bg-main"
+              }`}
+              onClick={() => setCurrentSlide(index)}
+            ></span>
+          ))}
+        </div>
+        <Image 
+          src="/media/images/gallery/leafy-green-sprout.png" 
+          alt="leaf sprout" 
+          width={200}
+          height={200}
+          className="absolute bottom-[-33px] left-0 rotate-[15.54deg]"
+        />
       </div>
     </section>
   )
