@@ -131,9 +131,9 @@ const Hero = () => {
         <Image 
           src="/media/images/gallery/leafy-green-sprout.png" 
           alt="leaf sprout" 
-          width={200}
-          height={200}
-          className="absolute bottom-[-33px] left-0 rotate-[15.54deg]"
+          width={150}
+          height={150}
+          className="absolute -bottom-4 left-0 rotate-[15.54deg] -z-0"
         />
       </div>
     </section>
