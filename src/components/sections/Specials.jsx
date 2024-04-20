@@ -29,6 +29,25 @@ const Specials = () => {
     },
   ];
 
+  const countDown = [
+    {
+      interval: 6,
+      allocation: "days"
+    },
+    {
+      interval: 40,
+      allocation: "hours"
+    },
+    {
+      interval: 11,
+      allocation: "mins"
+    },
+    {
+      interval: 6,
+      allocation: "secs"
+    },
+  ];
+
   return (
     <section className="py-16">
       <div className="container">
@@ -36,12 +55,34 @@ const Specials = () => {
           <h3 className="section-heading-title">This Week&#39;s Specials</h3>
           <p>Roll your tongue into our palpate stimulating weekly special offers</p>
         </header>
+        <div className="counter flex gap-x-3 items-center justify-center">
+          {countDown && countDown.map((countDownItem, countDownItemIndex) => (
+          <div key={countDownItemIndex} className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-400">
+            <span className="text-main-200">{countDownItem.interval}</span>
+            <span className="text-sm text-gray-600 capitalize">{countDownItem.allocation}</span>
+          </div>)
+          )}
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
           {
             specials.map((special, specialIndex) => (
               <SpecialsCard special={special} key={specialIndex}/>
             ))
           }
+        </div>
+        <div className="mt-12 flex items-center justify-between">
+          <button className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-500 text-white opacity-85 hover:opacity-100">
+            <span className="bi-arrow-left"></span>
+          </button>
+          <div className="items-center justify-center gap-x-1">
+            <span className="bg-main-500 h-3 w-3 rounded-full"></span>
+            <span className="bg-main-700 h-3 sm:h-2 w-3 sm:w-8 rounded-full"></span>
+            <span className="bg-main-500 h-3 w-3 rounded-full"></span>
+            <span className="bg-main-500 h-3 w-3 rounded-full"></span>
+          </div>
+          <button className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-500 text-white opacity-85 hover:opacity-100">
+            <span className="bi-arrow-left"></span>
+          </button>
         </div>
       </div>      
     </section>
