@@ -1,6 +1,11 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import SpecialsCard from "../subcomponents/SpecialsCard";
 
 const Specials = () => {
+
+  const [countDown, setCountDown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   const specials = [
     {
@@ -29,7 +34,7 @@ const Specials = () => {
     },
   ];
 
-  const countDown = [
+  const countDownItems = [
     {
       interval: 6,
       allocation: "days"
@@ -48,6 +53,34 @@ const Specials = () => {
     },
   ];
 
+  useEffect(() => {
+    const lastUpdateTimestamp = new Date().getTime();
+    const nextUpdateTimeStamp = lastUpdateTimestamp + (7 * 24 * 60 * 60 * 1000);
+
+    const updateCountDown = () => {
+      const now = new Date().getTime();
+      
+      const distance = nextUpdateTimeStamp - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / (1000));
+
+      setCountDown({ days, hours, minutes, seconds });
+
+      if (distance < 0){
+        clearInterval(interval);
+      }
+    }
+
+    updateCountDown();
+
+    const interval = setInterval(updateCountDown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="py-16">
       <div className="container">
@@ -56,12 +89,22 @@ const Specials = () => {
           <p>Roll your tongue into our palpate stimulating weekly special offers</p>
         </header>
         <div className="counter flex gap-x-2 md:gap-x-3 items-center justify-center">
-          {countDown && countDown.map((countDownItem, countDownItemIndex) => (
-          <div key={countDownItemIndex} className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-400">
-            <span className="text-main-200">{countDownItem.interval}</span>
-            <span className="text-sm text-gray-600 capitalize">{countDownItem.allocation}</span>
-          </div>)
-          )}
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-400">
+            <span className="text-main-200">{countDown.days}</span>
+            <span className="text-sm text-gray-600 capitalize">days</span>
+          </div>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-400">
+            <span className="text-main-200">{countDown.hours}</span>
+            <span className="text-sm text-gray-600 capitalize">Hours</span>
+          </div>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-400">
+            <span className="text-main-200">{countDown.minutes}</span>
+            <span className="text-sm text-gray-600 capitalize">Mins</span>
+          </div>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-400">
+            <span className="text-main-200">{countDown.seconds}</span>
+            <span className="text-sm text-gray-600 capitalize">Secs</span>
+          </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
           {
@@ -71,16 +114,17 @@ const Specials = () => {
           }
         </div>
         <div className="mt-12 flex items-center justify-between">
-          <button className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-500 text-white opacity-85 hover:opacity-100">
+          <button className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-100 text-white opacity-85 hover:opacity-100">
             <span className="bi-arrow-left"></span>
           </button>
           <div className="flex items-center justify-center gap-x-1">
-            <span className="bg-main-500 h-3 w-3 rounded-full"></span>
-            <span className="bg-main-700 h-3 sm:h-2 w-3 sm:w-8 rounded-full"></span>
-            <span className="bg-main-500 h-3 w-3 rounded-full"></span>
-            <span className="bg-main-500 h-3 w-3 rounded-full"></span>
+            <span className="bg-main-100 h-[6px] w-[6px] rounded-full"></span>
+            <span className="bg-main-200 h-[6px] sm:h-[6px] w-[6px] sm:w-16 rounded-full"></span>
+            <span className="bg-main-100 h-[6px] w-[6px] rounded-full"></span>
+            <span className="bg-main-100 h-[6px] w-[6px] rounded-full"></span>
+            <span className="bg-main-100 h-[6px] w-[6px] rounded-full"></span>
           </div>
-          <button className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-500 text-white opacity-85 hover:opacity-100">
+          <button className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-100 text-white opacity-85 hover:opacity-100">
             <span className="bi-arrow-right"></span>
           </button>
         </div>
