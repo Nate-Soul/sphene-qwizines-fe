@@ -6,16 +6,13 @@ const AboutUs = () => {
     const crumbs = generateCrumbs("/about");
   return (
     <>
-    <GenericHeader title="About Us" crumbs={crumbs}/>
-    <section className="py-14">
+    <GenericHeader title="About Us" crumbs={crumbs} />
+    <section className="py-14 bg-secondary-500 bg-opacity-[0.65] text-dark-500">
         <div className="container">
-            <div className="section-heading">
-                <h3 className="section-heading-title">Who we are</h3>
-            </div>
             <div className="grid grid-cols-1 xl:grid-cols-2 items-center gap-6">
                 <picture className="relative">
                     <Image 
-                        src="/media/images/products/img5.jpg" 
+                        src="/media/images/gallery/about-sphene-qwizines.png" 
                         alt="About Sphene Qwizines" 
                         className="object-cover w-full"
                         width={626}
@@ -24,6 +21,9 @@ const AboutUs = () => {
                     />
                 </picture>
                 <article>
+                    <div className="section-heading">
+                        <h3 className="section-heading-title text-left capitalize">Who we are</h3>
+                    </div>
                     <p className="mb-4">
                         At Sphene Qwizines, we&#39;re passionate about Nigerian cuisine and the unique flavors and spices that make it so special. We believe that food is not just about sustenance, but about culture, tradition, and community. That&#39;s why we&#39;re committed to bringing the taste of Nigeria to your doorstep, wherever you are in the world.
                     </p>

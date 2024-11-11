@@ -10,7 +10,7 @@ const ContactUs = () => {
     <GenericHeader title="Contact Us" crumbs={crumbs}/>
     <section className="py-16">
       <div className="container grid grid-cols-12">
-        <aside className="col-span-12 lg:col-span-4 xl:col-span-3 flex flex-wrap flex-row gap-4 lg:flex-col lg:justify-between bg-main text-white p-5 rounded-b-lg lg:rounded-br-none lg:rounded-s-xl order-2 lg:order-1 overflow-hidden">
+        <aside className="col-span-12 lg:col-span-4 xl:col-span-3 flex flex-wrap flex-row gap-4 lg:flex-col lg:justify-between bg-main-500 text-white p-5 rounded-b-lg lg:rounded-br-none lg:rounded-s-xl order-2 lg:order-1 overflow-hidden">
         <div className="flex flex-none flex-col gap-4 w-full sm:w-1/2 md:w-1/3 lg:w-auto">
                 <h6 className="font-semibold uppercase">
                   Branches 

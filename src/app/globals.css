@@ -63,10 +63,10 @@
 }
 
 .wcu-card {
-  @apply shadow-lg p-6 rounded-lg flex flex-col gap-4 items-center text-center
+  @apply shadow-custom-1 py-3 px-2 rounded-lg flex flex-col gap-y-3 items-center text-center bg-secondary-500
 }
 
-.special-card{
+.special-card {
   @apply rounded-lg shadow-lg p-3
 }
 

@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
     ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-secondary-500 bg-opacity-[0.65] text-dark-500 bg-[url('/media/images/gallery/spices-photoroom.png')] bg-no-repeat bg-bottom bg-contain">
         <div className="container">
             <header className="section-heading">
                 <h3 className="section-heading-title">Why Choose Us?</h3>
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
                     <div className="icon">
                         <span className={`bi bi-${statement.icon} text-3xl text-main`}></span>
                     </div>
-                    <h4 className="uppercase font-semibold">{statement.title}</h4>
+                    <h4 className="capitalize font-bold">{statement.title}</h4>
                     <div className="body">
                         <p>
                             {statement.content}
