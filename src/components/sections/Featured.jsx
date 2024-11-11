@@ -21,7 +21,7 @@ const Featured = () => {
         <div className="flex justify-center mt-8">
           <Link 
             href="/menu" 
-            className="text-main border border-main py-2 px-3 rounded-3xl hover:text-white hover:bg-main-200"
+            className="text-main border border-main-600 text-main-600 py-2 px-3 rounded-lg hover:text-main-700 hover:border-main-700"
           >
             View all
           </Link>

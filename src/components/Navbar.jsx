@@ -23,12 +23,12 @@ const Navbar = () => {
     <nav className="shadow-sm py-4 bg-transparent relative">
       <div className="container flex items-center justify-between gap-4">
         <button className="inline-flex font-semibold md:hidden" onClick={toggleOpenMenu}>
-          <span className={`bi bi-list nav-link ${openMenu ? "hidden": ""}`}></span>
-          <span className={`bi bi-x-lg nav-link ${openMenu ? "": "hidden"}`}></span>
+          <span className={`bi bi-list nav-link ${openMenu ? "hidden" : ""}`}></span>
+          <span className={`bi bi-x-lg nav-link ${openMenu ? "" : "hidden"}`}></span>
         </button>
         {openMenu && (
           <div className="mobile-menu absolute transition-opacity block md:hidden top-16 left-0 w-full bg-main-100 bg-opacity-95 text-center overflow-y-auto">
-            <ul className="flex flex-col justify-center gap-5 capitalize font-semibold text-white pt-16">
+            <ul className="flex flex-col justify-center gap-5 capitalize font-semibold text-light-400 pt-16">
               <li>
                 <Link href="/" className={`block py-2 hover:text-light ${currentUrl === "/" ? "text-light" : ""}`}>Home</Link>
               </li>

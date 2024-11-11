@@ -111,31 +111,31 @@ const Specials = () => {
   // console.log({limit, offset, totalViews});
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-light-400 text-dark-500">
       <div className="container">
         <header className="section-heading">
           <h3 className="section-heading-title">This Week&#39;s Specials</h3>
           <p>Roll your tongue into our palpate stimulating weekly special offers</p>
         </header>
         <div className="counter flex gap-x-2 md:gap-x-3 items-center justify-center">
-          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-100 relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-300 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
-            <span className="text-main-200">{countDown.days}</span>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col  relative">
+            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-600 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
+            <span className="text-main-600">{countDown.days}</span>
             <span className="text-sm text-gray-600 capitalize">days</span>
           </div>
-          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-100 relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-300 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
-            <span className="text-main-200">{countDown.hours}</span>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col relative">
+            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-600 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
+            <span className="text-main-600">{countDown.hours}</span>
             <span className="text-sm text-gray-600 capitalize">Hours</span>
           </div>
-          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-100 relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-300 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
-            <span className="text-main-200">{countDown.minutes}</span>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col relative">
+            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-600 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
+            <span className="text-main-600">{countDown.minutes}</span>
             <span className="text-sm text-gray-600 capitalize">Mins</span>
           </div>
-          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col border-2 border-main-100 relative">
-            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-300 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
-            <span className="text-main-200">{countDown.seconds}</span>
+          <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col relative">
+            <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-600 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
+            <span className="text-main-600">{countDown.seconds}</span>
             <span className="text-sm text-gray-600 capitalize">Secs</span>
           </div>
         </div>
@@ -148,7 +148,7 @@ const Specials = () => {
         </div>
         <div className="mt-12 flex items-center justify-between">
           <button 
-            className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-100 text-white opacity-85 hover:opacity-100"
+            className="h-8 w-8 rounded-full inline-flex items-center justify-center btn-main"
             onClick={handlePageViewLeft}
             disabled={currentView === 0}
           >
@@ -157,13 +157,13 @@ const Specials = () => {
           <div className="flex items-center justify-center gap-x-1">
             {
               Array.from({ length: totalViews }, (_, index) => (
-                <span key={index} className={`${currentView === index ? 'bg-main-500 sm:w-16' : 'bg-main-100'} h-[6px] w-[6px] rounded-full`}></span>
+                <span key={index} className={`${currentView === index ? 'bg-main-600 sm:w-16' : 'bg-main-500'} h-[6px] w-[6px] rounded-full`}></span>
               ))
             }
           </div>
           <button 
             onClick={handlePageViewRight} 
-            className="h-8 w-8 rounded-full inline-flex items-center justify-center bg-main-100 text-white opacity-85 hover:opacity-100"
+            className="h-8 w-8 rounded-full inline-flex items-center justify-center btn-main"
             disabled={currentView + 1 >= totalViews}
           >
             <span className="bi-arrow-right"></span>

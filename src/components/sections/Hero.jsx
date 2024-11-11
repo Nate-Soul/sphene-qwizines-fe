@@ -79,7 +79,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="bg-light relative py-20 overflow-hidden">
+    <section className="bg-secondary-500 relative py-20 overflow-hidden">
       <div className="container">
       {slideitems && slideitems.map((slideitem, index) => (
         <div className={`transition ease-in-out ${currentSlide === index ? "flex items-center opacity-100" : "hidden opacity-0"}`} key={index}>
@@ -91,7 +91,7 @@ const Hero = () => {
             <div className="cta-group">
               <Link
                 href="/menu" 
-                className="px-3 sm:px-5 py-3 sm:py-4 font-medium rounded-full bg-main text-white uppercase text-xs sm:text-sm hover:bg-main-200"
+                className="px-3 sm:px-5 py-3 sm:py-4 btn btn-main capitalize text-xs sm:text-sm"
               >
                 Explore Our Menu
               </Link>

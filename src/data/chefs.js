@@ -2,7 +2,7 @@ export const chefs = [
     {
       id: 1,
       imageUrl: "/media/images/chefs/josephine-cooker.webp",
-      name: "Adaeze Coker",
+      name: "Gregoria Uwem",
       jobTitle: "Head of Kitchen"
     },
     {
@@ -14,7 +14,7 @@ export const chefs = [
     {
       id: 3,
       imageUrl: "/media/images/chefs/bella-ford.webp",
-      name: "Gregoria Uwem",
+      name: "Adaeze Coker",
       jobTitle: "Kitchen Assistant"
     },
 ];

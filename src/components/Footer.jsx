@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-main-200 text-white py-16">
+    <footer className="bg-main-600 text-light-500 py-16">
         <div className="container">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="col-span-1">
@@ -14,7 +14,7 @@ const Footer = () => {
                                 At sphene Qwizines we&apos;re passionate about Nigerian cuisines and the unique flavours that make it special. we believe that food is not just about sustenance, but culture, tradition, and community.
                                 </p>
                                 <p>
-                                <Link href="/about" className="py-2 px-3 border border-gray-100 rounded-3xl inline-flex gap-x-2 justify-center items-center text-white hover:border-transparent hover:bg-gray-200 hover:text-main-300">
+                                <Link href="/about" className="py-2 px-3 border border-gray-100 rounded-3xl inline-flex gap-x-2 justify-center items-center text-gray-100 hover:border-transparent hover:bg-light-500 hover:text-main-700">
                                     Learn More
                                 </Link>
                                 </p>
@@ -25,8 +25,8 @@ const Footer = () => {
                             <p className="text-sm">You can trust us. We&#39;ll send you only promotions and offers.</p>
                             <form>
                                 <div className="flex relative">
-                                    <input type="email" name="email_sub" id="emailSub" className="bg-white text-gray-700 outline-main-200 p-3 rounded-3xl w-full" placeholder="Enter your email address"/>
-                                    <button className="absolute right-0 py-3 px-4 border-none bg-main rounded-3xl hover:bg-main-200 hover:text-light"><span className="bi bi-arrow-right"></span></button>
+                                    <input type="email" name="email_sub" id="emailSub" className="bg-white text-gray-700 outline-main-800 p-3 rounded-lg w-full" placeholder="Enter your email address"/>
+                                    <button className="absolute right-0 py-3 px-4 bg-main-700 rounded-lg hover:bg-main-800 hover:text-light-500"><span className="bi bi-arrow-right"></span></button>
                                 </div>
                             </form>
                         </div>
@@ -92,7 +92,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="mt-8 text-center bg-main-400 text-white p-5">
+            <div className="mt-8 text-center bg-main-700 text-white p-5">
                 <p>Sphene Qwizines &copy; 2023 - {new Date().getFullYear()} All rights reserved. Made with <span className="bi bi-heart-fill text-red-600"></span> using Next.js &amp; Strapi CMS by <Link className="footer-link" href="https://github.com/Nate-Soul">Nate</Link></p>
             </div>
         </div>

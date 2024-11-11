@@ -72,7 +72,7 @@ const Testimonials = () => {
       handle: "@mickelsmith",
       comment: "I was blown away by the quality of food and customer service at Sphene Qwizines. The plantain chips are addictive, and the customer support team went above and beyond to make sure my order was just right. I can't wait to order from them again."
     },
-  ]
+  ];
 
   return (
     <section className="py-16">
@@ -89,10 +89,10 @@ const Testimonials = () => {
           }
         </div>
         <div className="flex justify-center mt-6">
-          <button className="bg-main p-2 rounded-s-3xl text-white text-xl hover:bg-main-200 transition" onClick={() => handleScroll("prev")} disabled={!canScrollLeft}>
+          <button className="btn-main p-2 rounded-s-lg text-white text-xl transition" onClick={() => handleScroll("prev")} disabled={!canScrollLeft}>
             <span className="bi bi-chevron-left"></span>
           </button>
-          <button className="bg-main p-2 rounded-e-3xl text-white text-xl hover:bg-main-200 transition" onClick={() => handleScroll("next")} disabled={!canScrollRight}>
+          <button className="btn-main p-2 rounded-e-lg text-white text-xl transition" onClick={() => handleScroll("next")} disabled={!canScrollRight}>
             <span className="bi bi-chevron-right"></span>
           </button>
         </div>

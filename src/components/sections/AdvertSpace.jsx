@@ -5,7 +5,7 @@ const AdvertSpace = () => {
   return (
     <div className="py-8">
       <div className="container">
-        <div className="w-full h-60 bg-main-700 text-white rounded-lg shadow flex gap-4 items-center justify-center xl:justify-between">
+        <div className="w-full h-60 bg-main-900 text-white rounded-lg shadow flex gap-4 items-center justify-center xl:justify-between">
             <Image 
                 src="/media/images/gallery/hero-3.png" 
                 alt="cooking arena" 
