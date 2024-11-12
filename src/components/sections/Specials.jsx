@@ -2,33 +2,32 @@
 
 import { useEffect, useState } from "react";
 import SpecialsCard from "../subcomponents/SpecialsCard";
+import useHorizontalScroll from "@/hooks/useHorizontalScroll";
 
 const Specials = () => {
 
   const [countDown, setCountDown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-  const maxPV = 3;
-  const [currentView, setCurrentView] = useState(0);
   const specials = [
     {
       id: 1,
-      image: "/media/images/products/fried-plantain.png",
-      name: "Fried Plantain and Grilled Chicken",
-      slug: "fried-plantain-grilled-chicken",
+      image: "/media/images/products/boiled-plaintain-with-protein.png",
+      name: "Boiled plantain with meat sauce",
+      slug: "boiled-plantain-with-meat-sauce",
       price: 2500,
       description: "Fragrant tomato stew cooked with rice and served with juicy, grilled chicken"
     },
     {
       id: 2,
-      image: "/media/images/products/spaghetti-grilled-beef.png",
-      name: "Spaghetti and Grilled Beef",
-      slug: "spaghetti-grilled-beef",
+      image: "/media/images/products/noodles-with-fried-plantain-and-egg.png",
+      name: "Noodles with Fried Plaintain and Egg",
+      slug: "noodles-with-fried-plantain-egg",
       price: 2800,
       description: "Golden fried rice with mixed vegetables, plantain, and a delicious homemade gravy"
     },
     {
       id: 3,
-      image: "/media/images/products/suya-salad.png",
-      name: "Grilled Chicken Suya Salad",
+      image: "/media/images/products/yam-porridge-with-fish.png",
+      name: "Yam Porridge with Dry Assorted Fish",
       slug: "grilled-chicken-suya-salad",
       price: 3000,
       description: "Spinach and pepper stew with assorted meat and fish, served with soft and fluffy pounded yam"
@@ -95,20 +94,12 @@ const Specials = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handlePageViewRight = () => {
-    setCurrentView(prev => Math.min(prev + 1, totalViews - 1));
-  }
-
-  const handlePageViewLeft = () => {
-    setCurrentView(prev => Math.max(prev - 1, 0));
-  };
-
-  const limit = currentView * maxPV;
-  // const offset = Math.min(specials.length, (currentView + 1) * maxPV);
-  const offset = Math.min(maxPV, specials.length - limit);
-  const totalViews = Math.ceil(specials.length / maxPV);
-
-  // console.log({limit, offset, totalViews});
+  const { 
+    carouselContainerRef, 
+    canScrollLeft, 
+    canScrollRight, 
+    handleCarouselScroll 
+  } = useHorizontalScroll();
 
   return (
     <section className="py-16 bg-light-400 text-dark-500">
@@ -117,7 +108,7 @@ const Specials = () => {
           <h3 className="section-heading-title">This Week&#39;s Specials</h3>
           <p>Roll your tongue into our palpate stimulating weekly special offers</p>
         </header>
-        <div className="counter flex gap-x-2 md:gap-x-3 items-center justify-center">
+        <div className="counter flex gap-x-2 md:gap-x-3 items-center justify-center mb-8">
           <div className="h-20 w-20 rounded-full inline-flex items-center justify-center flex-col  relative">
             <div className="absolute top-0 left-0 w-full h-full bg-transparent border-2 border-main-600 border-e-transparent animate-spin rounded-full motion-reduce:animate-[spin_3s_linear_infinite]"></div>
             <span className="text-main-600">{countDown.days}</span>
@@ -139,32 +130,25 @@ const Specials = () => {
             <span className="text-sm text-gray-600 capitalize">Secs</span>
           </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-16">
+        <div className="flex gap-4 md:gap-6 horizontal-scroll hide-scrollbar" ref={carouselContainerRef}>
           {
-            specials.splice(limit, offset).map((special, specialIndex) => (
+            specials.map((special, specialIndex) => (
               <SpecialsCard special={special} key={specialIndex}/>
             ))
           }
         </div>
-        <div className="mt-12 flex items-center justify-between">
+        <div className="mt-12 flex items-center justify-center">
           <button 
-            className="h-8 w-8 rounded-full inline-flex items-center justify-center btn-main"
-            onClick={handlePageViewLeft}
-            disabled={currentView === 0}
+            className="h-10 w-10 rounded-s-lg inline-flex items-center justify-center btn-main"
+            onClick={(e) => handleCarouselScroll(e, "left")}
+            disabled={!canScrollLeft}
           >
             <span className="bi-arrow-left"></span>
           </button>
-          <div className="flex items-center justify-center gap-x-1">
-            {
-              Array.from({ length: totalViews }, (_, index) => (
-                <span key={index} className={`${currentView === index ? 'bg-main-600 sm:w-16' : 'bg-main-500'} h-[6px] w-[6px] rounded-full`}></span>
-              ))
-            }
-          </div>
           <button 
-            onClick={handlePageViewRight} 
-            className="h-8 w-8 rounded-full inline-flex items-center justify-center btn-main"
-            disabled={currentView + 1 >= totalViews}
+            onClick={(e) => handleCarouselScroll(e, "right")} 
+            className="h-10 w-10 rounded-e-lg inline-flex items-center justify-center btn-main"
+            disabled={!canScrollRight}
           >
             <span className="bi-arrow-right"></span>
           </button>

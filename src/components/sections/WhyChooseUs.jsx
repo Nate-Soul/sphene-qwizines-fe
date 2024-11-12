@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 
 const WhyChooseUs = () => {
@@ -24,7 +25,8 @@ const WhyChooseUs = () => {
     ];
 
   return (
-    <section className="py-16 bg-secondary-500 bg-opacity-[0.65] text-dark-500 bg-[url('/media/images/gallery/spices-photoroom.png')] bg-no-repeat bg-bottom bg-contain">
+    <section className="py-16 bg-secondary-500 bg-opacity-[0.65] text-dark-500 relative overflow-hidden z-0">
+        <Image src="/media/images/gallery/spices-photoroom.png" className="absolute -bottom-[60%] object-contain opacity-60 -z-[1]" height={636} width={1063} priority />          
         <div className="container">
             <header className="section-heading">
                 <h3 className="section-heading-title">Why Choose Us?</h3>

@@ -27,19 +27,19 @@ const Navbar = () => {
           <span className={`bi bi-x-lg nav-link ${openMenu ? "" : "hidden"}`}></span>
         </button>
         {openMenu && (
-          <div className="mobile-menu absolute transition-opacity block md:hidden top-16 left-0 w-full bg-main-100 bg-opacity-95 text-center overflow-y-auto">
+          <div className="mobile-menu absolute transition-opacity block md:hidden top-16 left-0 w-full bg-main-700 bg-opacity-95 text-center overflow-y-auto">
             <ul className="flex flex-col justify-center gap-5 capitalize font-semibold text-light-400 pt-16">
               <li>
-                <Link href="/" className={`block py-2 hover:text-light ${currentUrl === "/" ? "text-light" : ""}`}>Home</Link>
+                <Link href="/" className={`block py-2 hover:text-main-300 ${currentUrl === "/" ? "text-main-300" : ""}`}>Home</Link>
               </li>
               <li>
-                <Link href="/about" className={`block py-2 hover:text-light ${currentUrl === "/about" ? "text-light" : ""}`}>About Us</Link>
+                <Link href="/about" className={`block py-2 hover:text-main-300 ${currentUrl === "/about" ? "text-main-300" : ""}`}>About Us</Link>
               </li>
               <li>
-                <Link href="/menu" className={`block py-2 hover:text-light ${currentUrl === "/menu" ? "text-light" : ""}`}>Menu</Link>
+                <Link href="/menu" className={`block py-2 hover:text-main-300 ${currentUrl === "/menu" ? "text-main-300" : ""}`}>Menu</Link>
               </li>
               <li>
-                <Link href="/contact" className={`block py-2 hover:text-light ${currentUrl === "/contact" ? "text-light" : ""}`}>Contact Us</Link>
+                <Link href="/contact" className={`block py-2 hover:text-main-300 ${currentUrl === "/contact" ? "text-main-300" : ""}`}>Contact Us</Link>
               </li>
             </ul>
           </div>)
