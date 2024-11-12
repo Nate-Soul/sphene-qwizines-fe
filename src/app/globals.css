@@ -9,7 +9,7 @@
 }
 
 .generic-header{
-  background: linear-gradient(rgba(104, 185, 22, 0.6), rgba(104, 185, 22, 0.6)), url('http://localhost:3000/media/images/gallery/img9.jpg') no-repeat center center/cover;
+  background: linear-gradient(rgba(104, 185, 22, 0.6), rgba(104, 185, 22, 0.6)), url('/media/images/gallery/img9.jpg') no-repeat center center/cover;
 }
 
 .nav-link{
